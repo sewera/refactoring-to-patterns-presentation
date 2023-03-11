@@ -1,2 +1,7 @@
-# refactoring-to-patterns-presentation
-A presentation for "Design Patterns: You've got it wrong" conference talk
+# Design Patterns: You've missed the point
+
+A presentation for "Design Patterns: You've missed the point" conference talk.
+
+---
+
+CC BY-SA 4.0 2023 Blazej Sewera
