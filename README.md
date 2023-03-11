@@ -11,6 +11,8 @@ yarn dev
 
 The contents of the presentation are in the `slides.md` file.
 
+**[TODO](./todo.md)**
+
 ---
 
 CC BY-SA 2023 Blazej Sewera
