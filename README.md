@@ -1,11 +1,16 @@
-# Welcome to [Slidev](https://github.com/slidevjs/slidev)!
+# Design Patterns: You've missed the point
 
-To start the slide show:
+A presentation for the talk.
 
-- `npm install`
-- `npm run dev`
-- visit http://localhost:3030
+To launch the slides, run:
 
-Edit the [slides.md](./slides.md) to see the changes.
+```sh
+yarn
+yarn dev
+```
 
-Learn more about Slidev on [documentations](https://sli.dev/).
+The contents of the presentation are in the `slides.md` file.
+
+---
+
+CC BY-SA 2023 Blazej Sewera
