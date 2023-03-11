@@ -1,7 +1,11 @@
-# Design Patterns: You've missed the point
+# Welcome to [Slidev](https://github.com/slidevjs/slidev)!
 
-A presentation for "Design Patterns: You've missed the point" conference talk.
+To start the slide show:
 
----
+- `npm install`
+- `npm run dev`
+- visit http://localhost:3030
 
-CC BY-SA 4.0 2023 Blazej Sewera
+Edit the [slides.md](./slides.md) to see the changes.
+
+Learn more about Slidev on [documentations](https://sli.dev/).
