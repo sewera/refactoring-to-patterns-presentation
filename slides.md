@@ -1,9 +1,10 @@
 ---
 theme: default
-layout: cover
+layout: statement
 ---
 
-# Design Patterns: You've missed the point
+# Design Patterns:
+# You've missed the point
 
 ---
 layout: two-cols
@@ -156,3 +157,197 @@ layout: two-cols
 - 10/10
 
 </v-clicks>
+
+---
+layout: statement
+---
+
+## Are they mutually exclusive?
+
+---
+layout: two-cols
+---
+
+# Another one
+
+<img
+  class="absolute bottom-2 left-0 w-72"
+  src="/img/kerievsky-2004.jpg"
+/>
+
+::right::
+
+<v-clicks>
+
+- simple design upfront
+- refactor to patterns
+- but only when you see the _problem_
+
+</v-clicks>
+
+---
+
+# Example
+
+```java {all|2-22}
+public static String exportFull(Collection<Order> orders) {
+    StringBuilder xml = new StringBuilder();
+    xml.append("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
+    xml.append("<orders>");
+    for (Order order : orders) {
+        xml.append("<order");
+        xml.append(" id='");
+        xml.append(order.getId());
+        xml.append("'>");
+        for (Product product : order.getProducts()) {
+            xml.append("<product");
+            xml.append(" id='");
+            xml.append(product.getId());
+            xml.append("'");
+            if (product.isEvent()) {
+                xml.append(" stylist='");
+                xml.append(stylistFor(product));
+                xml.append("'");
+            }
+
+            if (product.getWeight() > 0) {
+                // 22 lines more
+```
+
+---
+
+# Example
+
+```java
+public static String exportFull(Account account) {
+    return XML_HEADER + account.fullXml();
+}
+```
+
+---
+
+# Tests first
+
+<v-clicks>
+
+- Approval tests
+- Only the external interface
+
+</v-clicks>
+
+<!--
+a.k.a. snapshot tests
+-->
+
+---
+transition: fade
+---
+
+# Simplify your life
+
+```java
+public class Price {
+    private final double amount;
+    private final String currencyCode;
+    public Price(double amount, String currencyCode) {
+        this.amount = amount;
+        this.currencyCode = currencyCode;
+    }
+    @Override
+    public String toString() {
+        return "Price{" + amount + '}';
+    }
+    public String getCurrency() {
+        return currencyCode;
+    }
+    public double getAmount() {
+        return amount;
+    }
+    // stuff
+```
+
+---
+
+# Simplify your life
+
+```java
+public record Price(double amount, String currencyCode)
+```
+
+---
+transition: fade
+---
+
+# Simplify your life
+
+```java
+public class Product {
+    protected final String name;
+    protected final String id;
+    protected final int weight;
+    protected final Price price;
+    public Product(String name, String id, int weight, Price price) {
+        this.name = name;
+        this.id = id;
+        this.weight = weight;
+        this.price = price;
+    }
+    public String getName() {
+        return name;
+    }
+    public String getId() {
+        return id;
+    }
+    @Override
+    public String toString() {
+        return "Product{" + name + '}';
+    }
+    public int getWeight() {
+        // stuff
+```
+
+---
+
+# Simplify your life
+
+```java
+import lombok.*;
+
+@Getter
+@ToString
+@AllArgsConstructor
+public class Product {
+```
+
+---
+
+# We've got our domain expert
+
+```java
+@AllArgsConstructor
+public class Ledger {
+    private final List<Order> orders;
+
+    public double getTaxInDollars() {
+        return orders.stream().mapToDouble(Order::getTaxInDollars).sum();
+    }
+}
+```
+
+---
+transition: fade
+---
+
+# We've got our domain expert
+
+```java
+public class Ledger
+```
+
+---
+
+# Okay, now we've got a _real_ domain expert
+
+```java
+public class Account
+```
