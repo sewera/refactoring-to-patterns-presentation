@@ -967,18 +967,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@slidev/theme-seriph@npm:*":
-  version: 0.21.3
-  resolution: "@slidev/theme-seriph@npm:0.21.3"
-  dependencies:
-    "@slidev/types": ^0.22.7
-    codemirror-theme-vars: ^0.1.1
-    prism-theme-vars: ^0.2.2
-    theme-vitesse: ^0.1.12
-  checksum: d7e2f67d6cf9fdd35901f98f5d6866f2e37f9baa412988d51a2878641d3ef3f6704383ce4cb876bd6292673052f07001d47cb5157b1ece68fc356172fb3671e8
-  languageName: node
-  linkType: hard
-
 "@slidev/types@npm:0.40.3":
   version: 0.40.3
   resolution: "@slidev/types@npm:0.40.3"
@@ -4857,7 +4845,6 @@ __metadata:
   dependencies:
     "@slidev/cli": ^0.40.3
     "@slidev/theme-default": "*"
-    "@slidev/theme-seriph": "*"
   languageName: unknown
   linkType: soft
 
