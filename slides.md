@@ -465,6 +465,46 @@ layout: statement
 </v-click>
 
 ---
+transition: fade
+---
+
+# Dependency mess
+
+```mermaid
+classDiagram
+    Product <|-- StoreEvent
+    XMLExporter ..> Product
+    XMLExporter ..> Store
+    XMLExporter ..> Price
+    XMLExporter ..> Order
+    StoreEvent ..> Store
+    XMLExporter ..> TaxCalculator
+    TaxCalculator ..> Order
+    TaxCalculator ..> Product
+    class XMLExporter {
+        + exportFullXml()
+    }
+```
+
+---
+
+# A cleaner goal
+
+```mermaid
+classDiagram
+    XMLExporter ..> Account
+    Account ..> Order
+    Order ..> Product
+    Product ..> Price
+    Product <|-- StoreEvent
+    Store ..> Product
+    XMLExporter ..> Store
+    class XMLExporter {
+        + exportFullXml()
+    }
+```
+
+---
 
 # Let's extract some leafs
 
