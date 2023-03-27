@@ -470,7 +470,7 @@ transition: fade
 
 # Dependency mess
 
-```mermaid
+```mermaid {scale: 0.6}
 classDiagram
     Product <|-- StoreEvent
     XMLExporter ..> Product
@@ -478,6 +478,9 @@ classDiagram
     XMLExporter ..> Price
     XMLExporter ..> Order
     StoreEvent ..> Store
+    Store ..> Product
+    Order ..> Product
+    Product ..> Price
     XMLExporter ..> TaxCalculator
     TaxCalculator ..> Order
     TaxCalculator ..> Product
@@ -490,7 +493,7 @@ classDiagram
 
 # A cleaner goal
 
-```mermaid
+```mermaid {scale: 0.6}
 classDiagram
     XMLExporter ..> Account
     Account ..> Order
