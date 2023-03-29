@@ -31,9 +31,3 @@ layout: quote
 So we need a _problem_
 
 </v-click>
-
-<!--
-Let's see an artist's visualization
-of what happens if you don't.
--->
-

@@ -1,9 +1,23 @@
 ---
 ---
 
-# FizzBuzz Enterprise Edition
+# FizzBuzz
 
-<v-click>
+```py {all|1|1-2|1-3|1-4|1-5|1-6|1-8|all}
+fizzbuzz(1) == '1'
+fizzbuzz(2) == '2'
+fizzbuzz(3) == 'Fizz'
+fizzbuzz(4) == '4'
+fizzbuzz(5) == 'Buzz'
+fizzbuzz(6) == 'Fizz'
+...
+fizzbuzz(14) == '14'
+fizzbuzz(15) == 'FizzBuzz'
+```
+
+---
+
+# FizzBuzz Enterprise Edition
 
 ```java {all|3-21}
 public class NoFizzNoBuzzStrategy implements IsEvenlyDivisibleStrategy {
@@ -31,8 +45,6 @@ public class NoFizzNoBuzzStrategy implements IsEvenlyDivisibleStrategy {
 }
 ```
 
-</v-click>
-
 ---
 
 # FizzBuzz Enterprise Edition
@@ -44,24 +56,3 @@ public class NoFizzNoBuzzStrategy implements IsEvenlyDivisibleStrategy {
 	}
 }
 ```
-
----
-
-# FizzBuzz Enterprise Edition
-
-<v-click>
-
-```java
-public class FizzBuzzOutputGenerationContextVisitorFactory
-```
-
-</v-click>
-
-<v-click>
-
-```java
-public interface StringStringReturner
-```
-
-</v-click>
-
