@@ -48,24 +48,9 @@ src: ./pages/rtp-implicit-tree-to-composite.md
 ---
 
 ---
-layout: statement
+src: ./pages/rtp-procedural-declarative.md
 ---
 
-## Towards a more declarative future
-
-<v-click>
-
-### or at least a Builder
-
-</v-click>
-
 ---
-layout: statement
+src: ./pages/rtp-encapsulate-composite-with-builder.md
 ---
-
-<div class="flex">
-    <img
-    class="w-100 mx-auto"
-    src="/img/its-all-coming-together.jpg"
-    />
-</div>

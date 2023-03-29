@@ -1,7 +1,25 @@
 ---
+layout: statement
+transition: fade
 ---
 
-# Capture the concept, not the process
+<v-click>
+
+## Encapsulate Composite with
+
+</v-click>
+
+# Builder
+
+<v-after>
+
+from "Refactoring to Patterns"
+
+</v-after>
+
+---
+
+# Delegate the procedure
 
 ```java {all|3|5|7|9|12-16}
 @Builder(toBuilder = true)
@@ -23,15 +41,25 @@ public class XmlTag {
 }
 ```
 
+<v-click>
+
+```xml
+<name parameter="parameter value">
+    value
+</name>
+```
+
+</v-click>
+
 ---
 transition: fade
 ---
 
-# Capture the concept, not the process
+# Don't break the interface... just yet
 
 ```java {all|8}
 public record Price(double amount, Currency currency) {
-    public void writeFullXml(StringBuilder xml) {
+    public void writeXml(StringBuilder xml) {
         var tag = XmlTag.builder()
                 .withName("price")
                 .withParameter(XmlParameter.of("currency", currency.toString()))
@@ -43,11 +71,11 @@ public record Price(double amount, Currency currency) {
 
 ---
 
-# Capture the concept, not the process
+# Simplify the interface
 
 ```java
 public record Price(double amount, Currency currency) {
-    public XmlTag fullXml() {
+    public XmlTag xml() {
         return XmlTag.builder()
                 .withName("price")
                 .withParameter(XmlParameter.of("currency", currency.toString()))
