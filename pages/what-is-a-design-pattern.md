@@ -17,6 +17,7 @@ Solution to a design _problem_
 
 ---
 layout: quote
+transition: fade
 ---
 
 # What is a _Software_ Design Pattern?
@@ -31,3 +32,10 @@ layout: quote
 So we need a _problem_
 
 </v-click>
+
+<!--
+Designing upfront:
+- guessing
+- we might get lucky
+- not guaranteed
+-->

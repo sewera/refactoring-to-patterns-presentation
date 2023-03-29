@@ -23,6 +23,8 @@ The class will have more properties in the future.
 -->
 
 ---
+transition: fade
+---
 
 # Don't guess
 
@@ -40,6 +42,12 @@ var simple = Simple.builder()
   .build();
 ```
 
+<!--
+Prematurely set a direction
+-->
+
+---
+transition: fade
 ---
 
 # Don't guess

@@ -1,6 +1,7 @@
 ---
 theme: default
 layout: statement
+transition: fade
 ---
 
 # Design Patterns:
@@ -12,8 +13,14 @@ layout: statement
 
 </v-click>
 
+<v-click>
+
+Software Engineer @ **Webfleet**
+
+</v-click>
+
 ---
-src: ./pages/introduction.md
+src: ./pages/what-is-a-design-pattern.md
 ---
 
 ---
@@ -25,34 +32,16 @@ src: ./pages/fizzbuzz.md
 ---
 
 ---
-layout: statement
+src: ./pages/yagni.md
 ---
 
-## Are they mutually exclusive?
-
 ---
-layout: statement
+src: ./pages/rtp-kata-description.md
 ---
 
-## Towards a better future!
-
-<v-click>
-
-### or at least a Composite
-
-</v-click>
-
 ---
-layout: statement
+src: ./pages/rtp-dependency-mess.md
 ---
-
-## That's a little bit better
-
-<v-click>
-
-### can it be even better?
-
-</v-click>
 
 ---
 layout: statement

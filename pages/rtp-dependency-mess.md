@@ -2,10 +2,11 @@
 transition: fade
 ---
 
-# Dependency mess
+# The problem: dependency mess
 
-```mermaid {scale: 0.6}
+```mermaid
 classDiagram
+    direction LR
     Product <|-- StoreEvent
     XMLExporter ..> Product
     XMLExporter ..> Store
@@ -25,19 +26,31 @@ classDiagram
 
 ---
 
-# A cleaner goal
+# The goal
 
-```mermaid {scale: 0.6}
+```mermaid
 classDiagram
+    direction LR
     XMLExporter ..> Account
     Account ..> Order
     Order ..> Product
-    Product ..> Price
+    Product <|-- RegularProduct
     Product <|-- StoreEvent
+    RegularProduct ..> Price
+    StoreEvent ..> Price
     Store ..> Product
     XMLExporter ..> Store
     class XMLExporter {
         + exportFullXml()
     }
+    class Product {
+        <<abstract>>
+    }
 ```
 
+---
+layout: statement
+transition: fade
+---
+
+# Composite
