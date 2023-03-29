@@ -19,6 +19,8 @@ var simple = Simple.builder()
 ```
 
 <!--
+People often make their lives harder.
+
 The class will have more properties in the future.
 -->
 

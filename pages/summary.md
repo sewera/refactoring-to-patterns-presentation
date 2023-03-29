@@ -6,10 +6,10 @@ transition: fade
 
 <v-clicks>
 
-- Design Pattern is a solution to a **_problem_**
-- You ain't gonna need it
-- Refactor if you need it
+- You ain't gonna need it — the simplest solution is the best
 - Use Design Patterns as refactoring targets
+- Design Pattern is a solution to a **_problem_**
+- Refactor if you need it
 - Refactoring == small steps
 - Practice
 

@@ -4,7 +4,7 @@ transition: fade
 
 # Procedural
 
-```java {all|3,6,8|4-6|7|3-8}
+```java {all|3,6,8|4-6|7}
 public record Price(double amount, Currency currency) {
     public void writeXml(StringBuilder xml) {
         xml.append("<price");

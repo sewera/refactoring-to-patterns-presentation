@@ -30,7 +30,7 @@ transition: fade
 
 # Problem: Dependency Mess
 
-```java {all|8|10|13-14|17,19|21}
+```java {all|8|10|13-14,21|17,19}
 public static String exportFull(Collection<Order> orders) {
     StringBuilder xml = new StringBuilder();
     xml.append("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");

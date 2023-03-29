@@ -50,6 +50,10 @@ src: ./pages/rtp-dependency-mess.md
 ---
 
 ---
+src: ./pages/domain-expert.md
+---
+
+---
 src: ./pages/rtp-implicit-tree-to-composite.md
 ---
 

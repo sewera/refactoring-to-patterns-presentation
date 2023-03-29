@@ -57,7 +57,7 @@ transition: fade
 
 # Don't break the interface... just yet
 
-```java {all|8}
+```java {all|3-7|8}
 public record Price(double amount, Currency currency) {
     public void writeXml(StringBuilder xml) {
         var tag = XmlTag.builder()

@@ -2,10 +2,11 @@
 transition: fade
 ---
 
-# What's next
+# Out of scope
 
 <v-clicks>
 
+- Tests and TCR (`test && commit || revert`)
 - Money as `double` 💀
 - `java.util.Date` 👎
 - Extract XML representation from domain objects

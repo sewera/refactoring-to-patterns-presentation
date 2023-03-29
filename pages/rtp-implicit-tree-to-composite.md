@@ -23,7 +23,7 @@ transition: fade
 
 # Small steps
 
-```java {8-13|8-13,18-23}
+```java {8-13,18-23}
 public static String exportFullXml(Collection<Order> orders) {
     StringBuilder xml = new StringBuilder();
     ...

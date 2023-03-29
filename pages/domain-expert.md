@@ -1,4 +1,5 @@
 ---
+transition: fade
 ---
 
 # We've got our domain expert
@@ -25,9 +26,15 @@ public class Ledger
 ```
 
 ---
+transition: fade
+---
 
-# Okay, now we've got a _real_ domain expert
+# We've got our domain expert
 
 ```java
 public class Account
 ```
+
+<!--
+On a second thought
+-->

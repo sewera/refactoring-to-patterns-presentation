@@ -1,9 +1,10 @@
 ---
+transition: fade
 ---
 
 # FizzBuzz
 
-```py {all|1|1-2|1-3|1-4|1-5|1-6|1-8|all}
+```py
 fizzbuzz(1) == '1'
 fizzbuzz(2) == '2'
 fizzbuzz(3) == 'Fizz'
@@ -15,6 +16,8 @@ fizzbuzz(14) == '14'
 fizzbuzz(15) == 'FizzBuzz'
 ```
 
+---
+transition: fade
 ---
 
 # FizzBuzz Enterprise Edition
@@ -45,6 +48,8 @@ public class NoFizzNoBuzzStrategy implements IsEvenlyDivisibleStrategy {
 }
 ```
 
+---
+transition: fade
 ---
 
 # FizzBuzz Enterprise Edition
