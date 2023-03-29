@@ -34,6 +34,10 @@ src: ./pages/dont-guess.md
 ---
 
 ---
+src: ./pages/simplify-your-life.md
+---
+
+---
 src: ./pages/fizzbuzz.md
 ---
 
@@ -70,7 +74,7 @@ src: ./pages/small-steps-big-change.md
 ---
 
 ---
-src: ./pages/what-next.md
+src: ./pages/out-of-scope.md
 ---
 
 ---

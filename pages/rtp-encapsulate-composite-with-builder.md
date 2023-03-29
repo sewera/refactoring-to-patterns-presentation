@@ -65,7 +65,7 @@ public record Price(double amount, Currency currency) {
                 .withParameter(XmlParameter.of("currency", currency.toString()))
                 .withValue(amount)
                 .build();
-        xml.append(tag.toString());
+        xml.append(tag);
     }
 ```
 

@@ -24,7 +24,7 @@ transition: fade
 # Small steps
 
 ```java {8-13,18-23}
-public static String exportFullXml(Collection<Order> orders) {
+public static String exportFull(Collection<Order> orders) {
     StringBuilder xml = new StringBuilder();
     ...
     for (Order order : orders) {
@@ -56,7 +56,7 @@ transition: fade
 # Small steps
 
 ```java {3,8|none}
-public static String exportFullXml(Collection<Order> orders) {
+public static String exportFull(Collection<Order> orders) {
     ...
     product.getPrice().writeXml(xml);
     ...

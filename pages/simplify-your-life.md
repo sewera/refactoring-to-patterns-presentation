@@ -26,6 +26,8 @@ public class Price {
 ```
 
 ---
+transition: fade
+---
 
 # Simplify your life
 
@@ -65,6 +67,8 @@ public class Product {
         // stuff
 ```
 
+---
+transition: fade
 ---
 
 # Simplify your life
