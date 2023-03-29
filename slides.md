@@ -1,5 +1,11 @@
 ---
 theme: default
+fonts:
+  sans: 'Inter,Helvetica Neue,system-ui,sans-serif'
+  serif: 'Source Serif Pro,serif'
+  mono: 'Fira Code,monospace'
+  local: 'Helvetica Neue,system-ui,sans-serif,serif,monospace'
+
 layout: statement
 transition: fade
 ---
@@ -61,4 +67,8 @@ src: ./pages/small-steps-big-change.md
 
 ---
 src: ./pages/what-next.md
+---
+
+---
+src: ./pages/summary.md
 ---
