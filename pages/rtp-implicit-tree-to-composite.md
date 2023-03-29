@@ -1,89 +1,75 @@
 ---
+layout: statement
+transition: fade
 ---
-
-# Let's extract some leafs
-
-```java {all|3-8}
-public static String exportFullXml(Collection<Order> orders) {
-    // ...
-    xml.append("<price");
-    xml.append(" currency='");
-    xml.append(product.getPrice().currency());
-    xml.append("'>");
-    xml.append(product.getPrice().amount());
-    xml.append("</price>");
-    // ...
-}
-```
-
----
-
-# Let's extract some leafs
-
-```java {19-21}
-public static String exportFullXml(Collection<Order> orders) {
-    StringBuilder xml = new StringBuilder();
-    xml.append("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
-    xml.append("<orders>");
-    for (Order order : orders) {
-        xml.append("<order");
-        xml.append(" id='");
-        xml.append(order.getId());
-        xml.append("'>");
-        for (Product product : order.getProducts()) {
-            xml.append("<product");
-            xml.append(" id='");
-            xml.append(product.getId());
-            xml.append("'");
-            if (product.isEvent()) {
-                xml.append(" stylist='");
-                xml.append(stylistFor(product));
-                xml.append("'");
-                //
-                somewhere here
-                //
-```
 
 <v-click>
 
-and duplicated
+## Replace Implicit Tree with
 
 </v-click>
+
+# Composite
+
+<v-after>
+
+from "Refactoring to Patterns"
+
+</v-after>
 
 ---
 transition: fade
 ---
 
-# Let's extract some leafs
+# Small steps
 
-```java {3-8}
+```java {8-13|8-13,18-23}
 public static String exportFullXml(Collection<Order> orders) {
-    // ...
-    xml.append("<price");
-    xml.append(" currency='");
-    xml.append(product.getPrice().currency());
-    xml.append("'>");
-    xml.append(product.getPrice().amount());
-    xml.append("</price>");
-    // ...
-}
+    StringBuilder xml = new StringBuilder();
+    ...
+    for (Order order : orders) {
+        ...
+        for (Product product : order.getProducts()) {
+            ...
+            xml.append("<price");
+            xml.append(" currency='");
+            xml.append(product.getPrice().currency());
+            xml.append("'>");
+            xml.append(product.getPrice().amount());
+            xml.append("</price>");
+
+public static String exportStore(Store store) {
+    ...
+    for (Product product : store.getStock()) {
+        xml.append("<price");
+        xml.append(" currency='");
+        xml.append(product.getPrice().currency());
+        xml.append("'>");
+        xml.append(product.getPrice().amount());
+        xml.append("</price>");
 ```
 
 ---
+transition: fade
+---
 
-# Let's extract some leafs
+# Small steps
 
-```java {3|none}
+```java {3,8|none}
 public static String exportFullXml(Collection<Order> orders) {
-    // ...
-    product.getPrice().writeFullXml(xml);
-    // ...
-}
+    ...
+    product.getPrice().writeXml(xml);
+    ...
+
+public static String exportStore(Store store) {
+    ...
+    product.getPrice().writeXml(xml);
+    ...
 ```
 
-```java {3-8|all|5,7}
+```java {all|5,7}
 public record Price(double amount, Currency currency) {
-    public void writeFullXml(StringBuilder xml) {
+    public void writeXml(StringBuilder xml) {
         xml.append("<price");
         xml.append(" currency='");
         xml.append(currency);
@@ -92,12 +78,6 @@ public record Price(double amount, Currency currency) {
         xml.append("</price>");
     }
 ```
-
-<v-click>
-
-Easy!
-
-</v-click>
 
 <!--
 That's the whole point in refactoring.

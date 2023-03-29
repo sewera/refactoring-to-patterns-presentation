@@ -44,6 +44,10 @@ src: ./pages/rtp-dependency-mess.md
 ---
 
 ---
+src: ./pages/rtp-implicit-tree-to-composite.md
+---
+
+---
 layout: statement
 ---
 

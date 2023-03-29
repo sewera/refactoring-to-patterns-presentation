@@ -97,10 +97,3 @@ public static String exportStore(Store store) {
     return XML_HEADER + store.xml();
 }
 ```
-
----
-layout: statement
-transition: fade
----
-
-# Composite
