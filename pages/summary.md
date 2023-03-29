@@ -14,3 +14,24 @@ transition: fade
 - Practice
 
 </v-clicks>
+
+---
+transition: fade
+layout: statement
+---
+
+### **Learn more**
+
+<br />
+
+All resources:
+
+### **[sewera.dev/rtp](https://www.sewera.dev/rtp)**
+
+<br />
+
+_Refactoring to Patterns_ by Joshua Kerievsky
+
+_Extreme Programming Explained_ by Kent Beck and Cynthia Andres
+
+_Design Patterns_ by Erich Gamma _et al._
