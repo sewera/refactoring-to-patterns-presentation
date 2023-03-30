@@ -22,7 +22,7 @@ from "Refactoring to Patterns"
 # Delegate the procedure
 
 ```java {all|3|5|7|9|12-16}
-@Builder(toBuilder = true)
+@Builder(setterPrefix = "with", toBuilder = true)
 public class XmlTag {
     private final String name;
     @Builder.Default
