@@ -5,7 +5,7 @@ transition: fade
 # Don't guess
 
 ```java
-@Builder
+@Builder(setterPrefix = "with")
 @AllArgsConstructor(access = PRIVATE)
 class Simple {
   private String label;
@@ -31,7 +31,7 @@ transition: fade
 # Don't guess
 
 ```java
-@Builder
+@Builder(setterPrefix = "with")
 @AllArgsConstructor(access = PRIVATE)
 class Simple {
   private String tag;
