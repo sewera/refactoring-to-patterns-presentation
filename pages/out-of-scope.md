@@ -6,7 +6,8 @@ transition: fade
 
 <v-clicks>
 
-- Approval tests and TCR (`test && commit || revert`)
+- Characterization tests
+- TCR (`test && commit || revert`)
 - Money as `double` 💀
 - `java.util.Date` 👎
 - Extract XML representation from domain objects

@@ -35,3 +35,5 @@ _Refactoring to Patterns_ by Joshua Kerievsky
 _Extreme Programming Explained_ by Kent Beck and Cynthia Andres
 
 _Design Patterns_ by Erich Gamma _et al._
+
+_Working Effectively with Legacy Code_ by Michael Feathers
